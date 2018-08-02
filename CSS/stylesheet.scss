@@ -1,0 +1,284 @@
+$font-stack: 'Raleway', sans-serif;
+$primary-text-color: rgba(0,0,0,1.00);
+$secondary-text-color: rgba(200,200,200,1.00);
+$tertiary-text-color: rgba(255,255,255,1.00);
+
+$primary-background-color: rgba(255,255,255,1.00);
+$secondary-background-color: rgba(0,0,0,1.00);
+
+@mixin animation($property) {
+	-webkit-animation: $property; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: $property; /* Firefox < 16 */
+        -ms-animation: $property; /* Internet Explorer */
+         -o-animation: $property; /* Opera < 12.1 */
+            animation: $property;
+}
+
+@mixin appearance($property) {
+	-webkit-appearance: $property; /* Safari, Chrome and Opera > 12.1 */
+       -moz-appearance: $property; /* Firefox < 16 */
+        -ms-appearance: $property; /* Internet Explorer */
+         -o-appearance: $property; /* Opera < 12.1 */
+            appearance: $property;
+}
+
+html{
+	font-size:100%;
+}
+
+body{
+	margin: 0;
+	font: 0.8em $font-stack;
+}
+
+form{
+	font: $font-stack;
+}
+
+h1{
+font: 2em;
+}
+
+a:link, a:visited,  {
+	text-decoration:none;
+	color:$primary-text-color;
+
+}
+
+a:hover {
+	text-decoration:none;
+	color:$secondary-text-color;
+}
+a:active {
+	text-decoration:none;
+}
+
+/*LAYOUT*/
+
+.container{
+	display: grid;
+	grid-template-columns:60px 160px auto 60px;
+	grid-template-rows:100px 20px auto auto auto;
+	/*header, buffer, swiper and menu, product information, footer*/ 
+	height: 100vh;
+	width:100%;
+}
+
+.header{
+	grid-column:1;
+	height:100px;
+}
+
+.logo{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start:1;
+	grid-row-end:1;
+	align-self:center;
+	
+	img{
+		width:100%;
+	}
+}
+
+.viewcart {
+	grid-column:3;
+	grid-row:1;
+	align-self:center;
+	float:right;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	color: $tertiary-text-color;
+    background-color: $secondary-background-color;
+    border: none;
+    padding: 8px 24px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font: 1em $font-stack;
+}
+
+.toggle{
+	display:none;
+}
+
+.menu{
+	grid-column:2;
+	grid-row:3;
+
+	ul{
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+	}
+
+	li{
+		padding:0px;
+	}
+}
+
+.index_picture{
+	grid-column:3;
+	grid-row:3;
+	align-self: center;
+	
+	img{
+		display:block;
+		margin:auto;
+		height:70vh;
+		@include animation(fade-in 3s);
+	}
+}
+
+.index_text{
+	display:block;
+	grid-column:3;
+	grid-row:3;
+}
+
+.item_list{
+	grid-column:3;
+	grid-row:3;
+}
+
+.item_carosel_container{
+	grid-column:3;
+	grid-row:3;
+	@include animation(fade-in 3s);
+}
+
+.item_container{
+	grid-column:3;
+	grid-row:4;
+	@include animation(fade-in 3s);
+}
+
+.item{
+	display:block;
+
+	img{
+		width:100%;
+	}
+}
+
+.item_row{
+	min-width:800px;
+	display:inline;
+}
+
+.item_picture{
+	float:left;
+	/*background-color:rgba(100,100,100,1);*/
+	overflow:hidden;
+
+	img{
+		width:100%;
+	}
+}
+
+.item_description{
+	float:left;
+	width:auto;
+	padding-left:20px;
+
+	form{
+		margin-left:auto;
+		float:both;
+		align: center;
+	}
+}
+
+.sidebar_r{
+	writing-mode: vertical-rl;
+	grid-column:4;
+	grid-row:3;
+	align-self:center;
+	justify-self:start;
+}
+
+.footer{
+	grid-column-start:1;
+	grid-column-end:5;
+	height:200px;
+	background-color:$secondary-background-color;
+	color:#888;
+	grid-row:last;
+
+	a{
+		color:#888;
+	}
+}
+
+.footer-grid{
+	display:grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-template-rows:none;
+}
+
+.footer-column{
+	padding:40px;
+}
+
+.caption{
+	background-color:$secondary-background-color;
+	color:$primary-text-color;
+	margin:auto;
+	width:100px;
+}
+
+/*EXTRAS*/
+
+
+/*fade in stuff*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media only screen and (max-device-width: 1080px) {
+
+	@import 'mobile-stylesheet';
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -63,13 +63,13 @@
 <div class="index_picture">
 
 <!--<img src="Images/Pictures/sa_mountain.jpg" alt="logo">-->
-<img src="Images/Pictures/penguin_design.png" alt="logo">
+<img src="Images/Pictures/paris_1.jpg" alt="Arc de triomphe">
 </div>
 
 <div class="sidebar_r">
-<div class="rotate">
-Beautiful times.
-</div>
+
+Beautiful times and pretty things.
+
 </div>
 
 <!--<div class="footer">
