@@ -99,7 +99,7 @@ input[type=button], input[type=submit], input[type=reset] {
     font: 1em $font-stack;
 }
 
-#collapseButton button{
+button {
 	color: $tertiary-text-color;
     background-color: $secondary-background-color;
     border: none;

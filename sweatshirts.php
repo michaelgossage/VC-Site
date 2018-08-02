@@ -109,7 +109,7 @@
 		<p>White brushed cotton-polyester blend sweatshirt with a digital printed photographic design of the 
 		Arc De Triomphe De l'Ètoile.</p>
 		
-		<button id="collapseButton">_details</button>
+		<button class="collapseButton">_details</button>
 		<div>
 			<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
 			<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
@@ -132,7 +132,7 @@
 	<option value="XL">XL </option>
 </select> </td></tr>
 </table>
-<input value="_add-to-cart" id="atc" class="add-to-class" type="submit" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<input value="_add-to-cart" class="add-to-class" type="submit" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
 	
@@ -175,8 +175,12 @@
 		<p>£80.00</p>
 		<p>Black brushed cotton-polyester blend sweatshirt with a digital printed photographic design combining the
 		Avenue des Champs-Élysées and the paris metro.</p>
-		<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
-		<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
+		
+		<button class="collapseButton">_details</button>
+		<div>
+			<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
+			<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
+		</div>
 		<br/>
 	
 	<!--ADD TO CART--> 
@@ -193,7 +197,7 @@
 	<option value="XL">XL </option>
 </select> </td></tr>
 </table>
-<input value="_add-to-cart" id="atc" class="add-to-class" type="submit" border="0" name="submit" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<input value="_add-to-cart" class="add-to-class" type="submit" border="0" name="submit" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
 
