@@ -110,11 +110,11 @@
 		<h1>Arc de Triomphe de l'Ètoile <!--Sweatshirt--></h1>
 		<p>£80.00</p>
 		<button id="collapseHeader">Details<button/>
-		<!--<p>Ships on 15th June.</p>-->
+		<!--<p>Ships on 15th June.</p>--><div>
 		<p>White brushed cotton-polyester blend sweatshirt with a digital printed photographic design of the 
 		Arc De Triomphe De l'Ètoile.</p>
 		<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
-		<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
+		<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p></div>
 		<!--<p>_postage: £5.00 - Free on purchases over £100.00</p>-->
 		<br/>
 	
