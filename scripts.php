@@ -8,8 +8,16 @@
     	
     	$("#collapseButton").click(function(){
     
-     	   $(this).next().toggle(500);
+     	   $(this).next().toggle(250);
     	});
+    	
+    	//for blocking add to cart if there is nothing in dropdown
+    	$("select").on('change',function(){
+   			if($(this).find('option:selected').text()=="null")
+       			$("#atc").attr('disabled',true)
+   			else
+       			$("#atc").attr('disabled',false)
+});
     	
 	});
 </script>

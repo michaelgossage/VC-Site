@@ -105,13 +105,17 @@
 <div class="item" style="margin-top:20px;">
 		<h1>Arc de Triomphe de l'Ètoile <!--Sweatshirt--></h1>
 		<p>£80.00</p>
-		<button id="collapseButton">Details</button>
-		<!--<p>Ships on 15th June.</p>--><div id="a">a</div>
+		<!--<p>Ships on 15th June.</p>-->
 		<p>White brushed cotton-polyester blend sweatshirt with a digital printed photographic design of the 
 		Arc De Triomphe De l'Ètoile.</p>
-		<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
-		<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
-		<!--<p>_postage: £5.00 - Free on purchases over £100.00</p>-->
+		
+		<button id="collapseButton">_details</button>
+		<div>
+			<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
+			<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
+			<!--<p>_postage: £5.00 - Free on purchases over £100.00</p>-->
+			<p>_care: Wash inside out at 30 degrees.</p>
+		</div>
 		<br/>
 	
 	<!--ADD TO CART--> 
@@ -121,14 +125,14 @@
 <table class="size-table">
 <!--<tr><td class="dropdown-label"><input type="hidden" name="on0" value="Sizes">Sizes</td></tr>-->
 <tr><td><select name="os0">
-	<option value="" disabled selected>_select your size</option>
+	<option value="null" disabled selected>_select your size</option>
 	<option value="S">S </option>
 	<option value="M">M </option>
 	<option value="L">L </option>
 	<option value="XL">XL </option>
 </select> </td></tr>
 </table>
-<input value="_add-to-cart" class="add-to-class" type="submit" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<input value="_add-to-cart" id="atc" class="add-to-class" type="submit" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
 	

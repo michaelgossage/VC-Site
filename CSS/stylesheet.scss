@@ -99,6 +99,18 @@ input[type=button], input[type=submit], input[type=reset] {
     font: 1em $font-stack;
 }
 
+#collapseButton button{
+	color: $tertiary-text-color;
+    background-color: $secondary-background-color;
+    border: none;
+    padding: 8px 24px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font: 1em $font-stack;
+
+}
+
 .toggle{
 	display:none;
 }
