@@ -50,6 +50,18 @@
 
 <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">-->
 
+<script>
+	$(document).ready(function(){
+   	 	$("#collapseHeader").click(function(){
+    
+     	   $(this).next().toggle(500);
+    	});
+    	
+	});
+
+</script>
+
+
 </head>
 
 <body>
@@ -59,8 +71,6 @@
 <?php
 	include 'menu.php' ;
 ?>
-				
-
 
 <div class="item_carosel_container">
 
@@ -99,6 +109,7 @@
 <div class="item" style="margin-top:20px;">
 		<h1>Arc de Triomphe de l'Ètoile <!--Sweatshirt--></h1>
 		<p>£80.00</p>
+		<p id="collapseHeader">Details<p/>
 		<!--<p>Ships on 15th June.</p>-->
 		<p>White brushed cotton-polyester blend sweatshirt with a digital printed photographic design of the 
 		Arc De Triomphe De l'Ètoile.</p>

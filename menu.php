@@ -38,18 +38,18 @@
 		
 		<li><a href="bags.php">Bag</a></li>
 		
-		<p></p>
+		<br/>
 		
 		<li style="color:rgba(200,200,200,1.00)"><!--<a href="lookbook.html">-->Lookbook<!--</a>--></li>
 		
 		<li style="color:rgba(200,200,200,1.00)"><!--<a href="video.html">-->Video<!--</a>--></li>
 		
-		<p></p>
+		<br/>
 		<li><a href="https://www.instagram.com/vacationculture">Instagram</a></li>
-		<p></p>
+		<br/>
 		<li><a href="concept.php">Concept</a></li>
 		<li><a href="contact.php">Contact</a></li>
-		<p></p>
+		<br/>
 		<li>
 			<div id="google_translate_element"></div><script type="text/javascript">
 			function googleTranslateElementInit() {
