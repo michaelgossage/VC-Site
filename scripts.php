@@ -12,8 +12,8 @@
     	});
     	
     	//for blocking add to cart if there is nothing in dropdown
-    	$("select").on('change',function(){
-   			if($(this).find('option:selected').text()=="null")
+    	$("select").ready(function(){
+   			if($(this).find('option:selected').val()=="null")
        			$("#atc").attr('disabled',true)
    			else
        			$("#atc").attr('disabled',false)
