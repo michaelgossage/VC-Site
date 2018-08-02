@@ -109,7 +109,7 @@
 <div class="item" style="margin-top:20px;">
 		<h1>Arc de Triomphe de l'Ètoile <!--Sweatshirt--></h1>
 		<p>£80.00</p>
-		<p id="collapseHeader">Details<p/>
+		<button id="collapseHeader">Details<button/>
 		<!--<p>Ships on 15th June.</p>-->
 		<p>White brushed cotton-polyester blend sweatshirt with a digital printed photographic design of the 
 		Arc De Triomphe De l'Ètoile.</p>
