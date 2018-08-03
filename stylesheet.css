@@ -60,7 +60,7 @@ input[type=button], input[type=submit], input[type=reset] {
   cursor: pointer;
   font: 1em "Raleway", sans-serif; }
 
-.collapseButton {
+.collapseButton, button.collapseButton {
   color: white;
   background-color: black;
   border: none;
