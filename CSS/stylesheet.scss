@@ -99,7 +99,7 @@ input[type=button], input[type=submit], input[type=reset] {
     font: 1em $font-stack;
 }
 
-button {
+.collapseButton {
 	color: $tertiary-text-color;
     background-color: $secondary-background-color;
     border: none;
@@ -108,7 +108,6 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     font: 1em $font-stack;
-
 }
 
 .toggle{
@@ -272,7 +271,7 @@ button {
     to   { opacity: 1; }
 }
 
-@media only screen and (max-device-width: 1080px) {
+@media only screen and (max-device-width: 11080px) {
 
 	@import 'mobile-stylesheet';
 	

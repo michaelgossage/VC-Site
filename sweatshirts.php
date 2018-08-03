@@ -122,13 +122,14 @@
 <table class="size-table">
 <!--<tr><td class="dropdown-label"><input type="hidden" name="on0" value="Sizes">Sizes</td></tr>-->
 <tr><td><select name="os0">
-	<option value="null" disabled selected>_select your size</option>
+	<option value="" disabled selected>_select your size</option>
 	<option value="S">S </option>
 	<option value="M">M </option>
 	<option value="L">L </option>
 	<option value="XL">XL </option>
 </select> </td></tr>
 </table>
+<br/>
 <input value="_add-to-cart" class="add-to-class" type="submit" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
@@ -189,13 +190,14 @@
 <table class="size-table">
 <!--<tr><td class="dropdown-label"><input type="hidden" name="on0" value="Sizes">Sizes</td></tr>-->
 <tr><td><select name="os0">
-	<option value="null" disabled selected>_select your size</option>
+	<option value="" disabled selected>_select your size</option>
 	<option value="S">S </option>
 	<option value="M">M </option>
 	<option value="L">L </option>
 	<option value="XL">XL </option>
 </select> </td></tr>
 </table>
+<br/>
 <input value="_add-to-cart" class="add-to-class" type="submit" border="0" name="submit" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
