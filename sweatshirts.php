@@ -179,7 +179,7 @@
 		<div style="display: none;">
 			<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
 			<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
-			<p>_care: Wash inside out at 30 degrees. Do not iron directly on to prints.</p>
+			<p>_care: Wash inside out at 30 degrees without any optical brighteners. Do not iron directly on to prints.</p>
 		</div>
 		<br/>
 	
