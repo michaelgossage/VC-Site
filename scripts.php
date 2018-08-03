@@ -6,9 +6,10 @@
      	   $(".menu").toggle(500);
     	});
     	
+    	
     	$(".collapseButton").click(function(){
     
-     	   $(this).next().toggle(250);
+     	   $(this).nextAll("div").first().toggle(250);
     	});
     	
     	//for blocking add to cart if there is nothing in dropdown
@@ -17,12 +18,17 @@
     		
     	});
     	
-    	$("select").on('change', function(){
     	var button = (".add-to-class");
+    	/*$("select").on('change', function(){
    			if($(this).find('option:selected').val()=="null")
        			$(button).attr('disabled',true);
    			else
        			$(button).attr('disabled',false).css("background-color", "black");
+       			
+		});*/
+    	
+    	$("select").change(function(){
+   			$(this).closest('table').nextAll(button).first().attr('disabled', false).css("background-color", "black");
        			
 		});
     	

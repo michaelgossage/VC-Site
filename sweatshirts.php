@@ -6,10 +6,6 @@
 
 <head>
 
-<?php
-	include 'scripts.php' ;
-?>
-
 <link rel="stylesheet" href="Swiper-4.1.0/dist/css/swiper.min.css">
 
 <style>
@@ -110,11 +106,12 @@
 		Arc De Triomphe De l'Ètoile.</p>
 		
 		<button class="collapseButton">_details</button>
-		<div>
+		<br/>
+		<div style="display: none;">
 			<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
 			<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
 			<!--<p>_postage: £5.00 - Free on purchases over £100.00</p>-->
-			<p>_care: Wash inside out at 30 degrees.</p>
+			<p>_care: Wash inside out at 30 degrees. Do not iron directly on to prints.</p>
 		</div>
 		<br/>
 	
@@ -177,9 +174,11 @@
 		Avenue des Champs-Élysées and the paris metro.</p>
 		
 		<button class="collapseButton">_details</button>
-		<div>
+		<br/>
+		<div style="display: none;">
 			<p>_materials: 320gsm, 80% brushed cotton, 20% polyester body construction. Poly-blend silk photographic print.</p>
 			<p>_sizing: Chest to fit S - 36/38", M - 38/40", L - 41/42", XL - 43/44"</p>
+			<p>_care: Wash inside out at 30 degrees. Do not iron directly on to prints.</p>
 		</div>
 		<br/>
 	

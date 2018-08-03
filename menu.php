@@ -1,3 +1,6 @@
+<?php
+	include 'scripts.php' ;
+?>
 
 <div class="logo">
 		<a href="http://www.vacation-culture.com">
