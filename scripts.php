@@ -13,10 +13,17 @@
     	
     	//for blocking add to cart if there is nothing in dropdown
     	$("select").ready(function(){
+    		$(".add-to-class").attr('disabled',true).css("background-color", "grey");
+    		
+    	});
+    	
+    	$("select").on('change', function(){
+    	var button = (".add-to-class");
    			if($(this).find('option:selected').val()=="null")
-       			$(".add-to-class").attr('disabled',true)
+       			$(button).attr('disabled',true);
    			else
-       			$(".add-to-class").attr('disabled',false)
+       			$(button).attr('disabled',false).css("background-color", "black");
+       			
 		});
     	
 	});
