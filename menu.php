@@ -25,9 +25,8 @@
 
 <div class="menu">
 	<ul> 
-		
+		<li><a href="tshirts.php">T-shirt</a></li>
 		<li><a href="sweatshirts.php">Sweatshirt</a></li>
-		
 		<li><a href="bags.php">Bag</a></li>
 		
 		<br/>
