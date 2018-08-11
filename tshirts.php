@@ -95,8 +95,18 @@
       
     </div>
     <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next" style="background-image:none;"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" viewBox="0 0 100 100">
+<path fill-rule="evenodd" stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M10.000,4.000 L42.000,36.000 L10.000,68.000 "/>
+</svg></div>
+    <div class="swiper-button-prev" style="background-image:none;"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"  width="64px" viewBox="0 0 100 100">
+<path fill-rule="evenodd"  stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M36.000,4.000 L4.000,36.000 L36.000,68.000 "/>
+</svg></div>
   </div>
 
 <div class="item" style="margin-top:20px;">
