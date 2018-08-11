@@ -73,22 +73,21 @@
     
       <div class="swiper-slide">
       	<div style="height: 570px;">
-      	place holder thing
-		<!--<img src="Images/ProductPictures/Sweater_Arc/Arc_Front.jpg" alt="logo" style="width:auto; max-height: 500px; max-width:100%; align:center; display:block;">-->
+		<img src="Images/ProductPictures/Tshirt_Arc/Arc_Tshirt_Front.jpg" alt="logo" style="width:auto; max-height: 500px; max-width:100%; align:center; display:block;">
 		<!--_front-->
 		</div>
       </div>
       
       <div class="swiper-slide">
       	<div style="height: 570px;">
-      	
+      	<img src="Images/ProductPictures/Tshirt_Arc/Arc_Tshirt_Back.jpg" alt="logo" style="width:auto; max-height: 500px; max-width:100%; align:center; display:block;">
       	
       	</div>
       </div>
       
       <div class="swiper-slide">
       	<div style="height: 570px;">
-      	
+      	<img src="Images/ProductPictures/Tshirt_Arc/Arc_Tshirt_Print.jpg" alt="logo" style="width:auto; max-height: 500px; max-width:100%; align:center; display:block;">
 		
       	</div>
       </div>
