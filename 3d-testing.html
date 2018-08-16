@@ -9,6 +9,7 @@
 	<script src="js/three.js"></script>
 		<script src="js/GLTFLoader.js"></script>
 		<script src="js/OrbitControls.js"></script>
+		<script src="js/cloView.js"></script>
 	<!--<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>-->
 	
 	</head>
@@ -18,13 +19,13 @@
 		
 		<br/>
 		viewer
-	<div id="hello"></div>
+	<div id="hello" style="width: 100%;height: 300px;"></div>
 	<br/>
 	hello2
-	<div id="hello2"></div>
+	<canvas id="hello2" style="width: 300px;height: 300px";></canvas>
 	
 		<script>
-		
+		/*
 		//TAKES Url of the gltf, id of where to put the 3d scene, 
 		//background color of the scene, 
 		//x and values of the size of the canvas
@@ -60,16 +61,7 @@
 		lightAmbient = new THREE.AmbientLight( 0xffffff,0.84);
 		scene.add( lightAmbient );
 		
-		/* makes a ground
-		
-		var groundGeo = new THREE.PlaneBufferGeometry( 10000, 10000 );
-				var groundMat = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x050505 } );
-				groundMat.color.setHSL( 1, 0.2, 0.5);
-				var ground = new THREE.Mesh( groundGeo, groundMat );
-				ground.rotation.x = -Math.PI/2;
-				ground.position.y = -33;
-				//scene.add( ground );
-				ground.receiveShadow = true;*/
+
 		
 		var renderer = new THREE.WebGLRenderer(antialias = true);
 		renderer.setSize( x, y );
@@ -95,7 +87,7 @@
 		}
 		animate();
 		
-		}
+		}*/
 		
 		//new cloView("assets/sweat.gltf",'hello2', 0xffffff,200,100);
 		
@@ -112,7 +104,7 @@
     		console.log("Congratulations! Your browser supports WebGL.");
 			
 			//run webGl content
-			new cloView("assets/sweatshirt.gltf",'hello', 0xffffff,300,300);
+			new cloView("assets/sweatshirt.gltf",'hello', 0xffffff,400,400);
 
        		 
     	} else {

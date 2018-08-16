@@ -3,7 +3,10 @@
 
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
-
+		<script src="js/three.js"></script>
+		<script src="js/GLTFLoader.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<script src="js/cloView.js"></script>
 <head>
 
 <link rel="stylesheet" href="Swiper-4.1.0/dist/css/swiper.min.css">
@@ -65,49 +68,10 @@
 ?>
 
 <div class="item_carosel_container">
+<div id="cloView-Arc"></div>
 
+<!-- Swiper - GOES HERE!! -->
 
-<!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-    
-      <div class="swiper-slide">
-      	<div style="height: 570px;">
-		<img src="Images/ProductPictures/Sweater_Arc/Arc_Front.jpg" alt="logo" style="width:auto; max-height: 500px; max-width:100%; align:center; display:block;">
-		<!--_front-->
-		</div>
-      </div>
-      
-      <div class="swiper-slide">
-      	<div style="height: 570px;">
-      	<img src="Images/ProductPictures/Sweater_Arc/Arc_Main-Print.jpg" alt="logo" style="align-self:center; width:auto; max-height: 500px; max-width:100%; align:center; margin:20px auto; display:block;">
-      	
-      	</div>
-      </div>
-      
-      <div class="swiper-slide">
-      	<div style="height: 570px;">
-      	<img src="Images/ProductPictures/Sweater_Arc/Arc_Tag.jpg" alt="logo" style="align-self:center; width:auto; max-height: 500px; max-width:100%; align:center; margin:20px auto; display:block;">
-		
-      	</div>
-      </div>
-      
-    </div>
-    <!-- Add Arrows . only need the swiper-button-next/prev class in a div but added css and cvg to change color to black-->
-    <div class="swiper-button-next" style="background-image:none;"><svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" viewBox="0 0 100 100">
-<path fill-rule="evenodd" stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
- d="M10.000,4.000 L42.000,36.000 L10.000,68.000 "/>
-</svg></div>
-    <div class="swiper-button-prev" style="background-image:none;"><svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"  width="64px" viewBox="0 0 100 100">
-<path fill-rule="evenodd"  stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
- d="M36.000,4.000 L4.000,36.000 L36.000,68.000 "/>
-</svg></div>
-  </div>
-  <!-- end swiper-->
 
 <div class="item" style="margin-top:20px;">
 		<h1>Arc de Triomphe de l'Ètoile <!--Sweatshirt--></h1>
@@ -149,45 +113,9 @@
 
 <hr>
 
+<div id="cloView-Champs"></div>
+<!-- Swiper - WOULD GO HERE -->
 
-<!-- Swiper -->
-  <div class="swiper-container">
-  
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-      	<div style="height: 570px;">
-		<img src="Images/ProductPictures/Sweater_Champs/Champs_Front.jpg" alt="logo" style="width:auto; max-height: 500px; max-width:100%; align:center; display:block;">
-		
-		</div>
-      </div>
-      <div class="swiper-slide">
-      	<div style="height: 570px;">
-      	<img src="Images/ProductPictures/Sweater_Champs/Champs_Main-Print.jpg" alt="logo" style="align-self:center; width:auto; max-height: 500px; max-width:100%; align:center; margin:20px auto; display:block;">
-      	
-      	</div>
-      </div>
-      <div class="swiper-slide">
-      	<div style="height: 570px;">
-      	<img src="Images/ProductPictures/Sweater_Champs/Champs_Tag.jpg" alt="logo" style="align-self:center; width:auto; max-height: 500px; max-width:100%; align:center; margin:20px auto; display:block;">
-		
-      	</div>
-      </div>
-      
-    </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next" style="background-image:none;"><svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" viewBox="0 0 100 100">
-<path fill-rule="evenodd" stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
- d="M10.000,4.000 L42.000,36.000 L10.000,68.000 "/>
-</svg></div>
-    <div class="swiper-button-prev" style="background-image:none;"><svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"  width="64px" viewBox="0 0 100 100">
-<path fill-rule="evenodd"  stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
- d="M36.000,4.000 L4.000,36.000 L36.000,68.000 "/>
-</svg></div>
-  </div>
     <!-- end swiper-->
 
 <div class="item" style="margin-top:20px;">
@@ -251,7 +179,35 @@
         prevEl: '.swiper-button-prev',
       },
     });
+  
+  
+  function detectWebGL () {
+    	// Create canvas element. The canvas is not added to the
+    	// document itself, so it is never displayed in the
+    	// browser window.
+    	var canvas = document.createElement("canvas");
+    	// Get WebGLRenderingContext from canvas element.
+    	var gl = canvas.getContext("webgl")
+      		|| canvas.getContext("experimental-webgl");
+    	// Report the result.
+    	if (gl && gl instanceof WebGLRenderingContext) {
+    		console.log("Congratulations! Your browser supports WebGL.");
+			
+			//run webGl content
+			new cloView("assets/sweatshirt.gltf",'cloView-Arc', 0xffffff,400,400);
+			
+			new cloView("assets/sweatshirt.gltf",'cloView-Champs', 0xffffff,400,400);
 
+       		 
+    	} else {
+				document.getElementById('hello').innerHTML='sorry no webGL so here is a slideshow';
+      		alert("Failed to get WebGL context. "
+        		+ "Your browser or device may not support WebGL.");
+    		}
+  		}
+  		
+  		detectWebGL();
+  		
   	</script>
 
 </body>
