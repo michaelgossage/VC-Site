@@ -49,6 +49,7 @@
   </style>
 	
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vacation_Culture</title>
 
 <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">-->
@@ -67,13 +68,13 @@
 	include 'menu.php' ;
 ?>
 
-<div class="item_carosel_container">
-<div id="cloView-Arc"></div>
+<div class="items_container">
+<div id="cloView-Arc" class="ThreeDView_Clothing"></div>
 
 <!-- Swiper - GOES HERE!! -->
 
 
-<div class="item" style="margin-top:20px;">
+<div class="item_details" style="margin-top:20px;">
 		<h1>Arc de Triomphe de l'Ètoile <!--Sweatshirt--></h1>
 		<p>£80.00</p>
 		<!--<p>Ships on 15th June.</p>-->
@@ -113,12 +114,12 @@
 
 <hr>
 
-<div id="cloView-Champs"></div>
+<div id="cloView-Champs" class="ThreeDView_Clothing"></div>
 <!-- Swiper - WOULD GO HERE -->
 
     <!-- end swiper-->
 
-<div class="item" style="margin-top:20px;">
+<div class="item_details" style="margin-top:20px;">
 		<h1>Avenue des Champs-Élysées</h1>
 		<p>£80.00</p>
 		<p>Black brushed cotton-polyester blend sweatshirt with a digital printed photographic design combining the

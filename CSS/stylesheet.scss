@@ -148,24 +148,18 @@ input[type=button], input[type=submit], input[type=reset] {
 	grid-row:3;
 }
 
-.item_list{
+/*.item_list{
 	grid-column:3;
 	grid-row:3;
-}
+}*/
 
-.item_carosel_container{
+.items_container{
 	grid-column:3;
 	grid-row:3;
 	@include animation(fade-in 3s);
 }
 
-.item_container{
-	grid-column:3;
-	grid-row:4;
-	@include animation(fade-in 3s);
-}
-
-.item{
+.item_details{
 	display:block;
 
 	img{
@@ -200,6 +194,10 @@ input[type=button], input[type=submit], input[type=reset] {
 	}
 }
 
+.ThreeDView_Clothing{
+	height: 500px;
+}
+
 .sidebar_r{
 	writing-mode: vertical-rl;
 	grid-column:4;
@@ -216,7 +214,7 @@ input[type=button], input[type=submit], input[type=reset] {
 	color:#888;
 	grid-row:last;
 
-	a{
+	a {
 		color:#888;
 	}
 }

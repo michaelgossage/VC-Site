@@ -26,7 +26,7 @@
 	include 'menu.php' ;
 ?>
 
-<div class="item_carosel_container">
+<div class="items_container">
 	<div style="padding:40px;">
 
 <!--<img src="Images/Pictures/sa_mountain.jpg" alt="logo">-->

@@ -1,25 +1,36 @@
 //clothing turntable
 
-//TAKES Url of the gltf, id of where to put the 3d scene, 
+		//Takes URL of the GLTF, 
+		//id of where to put the 3d scene, 
 		//background color of the scene, 
 		//x and values of the size of the canvas
 		function cloView(url, id ,backgroundCol,x,y){
 		
-		var renderer = new THREE.WebGLRenderer();
-		renderer.antialias = true
-		renderer.setSize( x, y );
-		//requires three.js , GLTFLoader.js , OrbitControls.js
+		//create a container variable with an element on the DOM
+		var container = document.getElementById(id);
 		
+		//Create a renderer and configure options
+		var renderer = new THREE.WebGLRenderer();
+		renderer.antialias = true;
+		renderer.shadowMap.enabled = true;
+		renderer.toneMapping= THREE.ReinhardToneMapping;
+		renderer.toneMappingExposure = 4;
+		renderer.precision = "highp";
+		//use this to render the correct amount of pixels and improve quality
+		renderer.setPixelRatio( window.devicePixelRatio );
+		renderer.setSize($(container).width(), $(container).height());
+		
+		//Create a scene and change the background color
 		var scene = new THREE.Scene();
 		var color = new THREE.Color( backgroundCol );
 		scene.background = color;
 		
-		var camera = new THREE.PerspectiveCamera( 50, x / y, 0.1, 10000 );
+		//Create a camera and set the ratio to the same size as the container/renderer
+		var camera = new THREE.PerspectiveCamera( 50, $(container).width() / $(container).height(), 0.1, 10000 );
 		camera.position.z =110;
 		
+		//Create controls and configure
 		var controls = new THREE.OrbitControls( camera, renderer.domElement );
-		//below doesnt work as intended
-		//controls.domElement = document.getElementById('cloView-Arc');
 		controls.target.set(0,0,0);
 		controls.enableDamping = true;
 		controls.dampingFactor=0.1;
@@ -30,16 +41,17 @@
 		controls.enablePan=false;
 		controls.minPolarAngle=1.5;
 		controls.maxPolarAngle=1.5;
-
-		lightDirectional = new THREE.DirectionalLight( 0xffffff,0.14);
-		lightDirectional.position.set( -1, 1.75, 1 );
+		
+		//create and configure lighting
+		lightDirectional = new THREE.DirectionalLight( 0xffffff,3);
+		lightDirectional.position.set( -1, 2.5, 1 );
 		lightDirectional.castShadow =true;
 		scene.add( lightDirectional );
 		
-		lightAmbient = new THREE.AmbientLight( 0xffffff,0.84);
+		lightAmbient = new THREE.AmbientLight( 0xffffff,0.8);
 		scene.add( lightAmbient );
 		
-		/* makes a ground
+		/* makes a ground plane
 		
 		var groundGeo = new THREE.PlaneBufferGeometry( 10000, 10000 );
 				var groundMat = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x050505 } );
@@ -51,13 +63,12 @@
 				ground.receiveShadow = true;*/
 		
 		
-		
 
-		document.getElementById(id).appendChild( renderer.domElement );
+		//append the renderer to the container on the DOM
+		container.appendChild( renderer.domElement );
 		
 		
-		//scene.add(cube);
-		
+		//load up the model and add to the scene
 		var model;
 		var loader = new THREE.GLTFLoader();
 		loader.load( url, function ( gltf ) {
@@ -66,11 +77,13 @@
 				scene.add( gltf.scene );
 		} );
 		
+		//update animations including the auto camera movement in the controls
 		function animate() {
 			requestAnimationFrame( animate );
 			controls.update();
 			renderer.render( scene, camera );
 		}
+		//run the animate function
 		animate();
 		
 		}

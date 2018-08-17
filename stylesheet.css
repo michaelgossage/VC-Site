@@ -106,11 +106,11 @@ input[type=button], input[type=submit], input[type=reset] {
   grid-column: 3;
   grid-row: 3; }
 
-.item_list {
-  grid-column: 3;
-  grid-row: 3; }
-
-.item_carosel_container {
+/*.item_list{
+	grid-column:3;
+	grid-row:3;
+}*/
+.items_container {
   grid-column: 3;
   grid-row: 3;
   -webkit-animation: fade-in 3s;
@@ -123,22 +123,9 @@ input[type=button], input[type=submit], input[type=reset] {
   /* Opera < 12.1 */
   animation: fade-in 3s; }
 
-.item_container {
-  grid-column: 3;
-  grid-row: 4;
-  -webkit-animation: fade-in 3s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fade-in 3s;
-  /* Firefox < 16 */
-  -ms-animation: fade-in 3s;
-  /* Internet Explorer */
-  -o-animation: fade-in 3s;
-  /* Opera < 12.1 */
-  animation: fade-in 3s; }
-
-.item {
+.item_details {
   display: block; }
-  .item img {
+  .item_details img {
     width: 100%; }
 
 .item_row {
@@ -160,6 +147,9 @@ input[type=button], input[type=submit], input[type=reset] {
     margin-left: auto;
     float: both;
     align: center; }
+
+.ThreeDView_Clothing {
+  height: 500px; }
 
 .sidebar_r {
   writing-mode: vertical-rl;
@@ -276,7 +266,7 @@ input[type=button], input[type=submit], input[type=reset] {
       height: 40px;
       width: auto; }
 
-  .item_carosel_container {
+  .items_container {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row: 3;
@@ -289,7 +279,7 @@ input[type=button], input[type=submit], input[type=reset] {
     align-self: center;
     margin: auto; }
 
-  .item {
+  .item_details {
     padding: 0 60px; }
 
   .index_text {

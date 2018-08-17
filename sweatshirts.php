@@ -64,7 +64,7 @@
 	include 'menu.php' ;
 ?>
 
-<div class="item_carosel_container">
+<div class="items_container">
 
 
 <!-- Swiper -->
@@ -109,7 +109,7 @@
   </div>
   <!-- end swiper-->
 
-<div class="item" style="margin-top:20px;">
+<div class="item_details" style="margin-top:20px;">
 		<h1>Arc de Triomphe de l'Ètoile <!--Sweatshirt--></h1>
 		<p>£80.00</p>
 		<!--<p>Ships on 15th June.</p>-->
@@ -190,7 +190,7 @@
   </div>
     <!-- end swiper-->
 
-<div class="item" style="margin-top:20px;">
+<div class="item_details" style="margin-top:20px;">
 		<h1>Avenue des Champs-Élysées</h1>
 		<p>£80.00</p>
 		<p>Black brushed cotton-polyester blend sweatshirt with a digital printed photographic design combining the
