@@ -197,7 +197,7 @@
 			//run webGl content
 			new cloView("assets/sweatshirt.gltf",'cloView-Arc', 0xffffff,400,400);
 			
-			new cloView("assets/sweatshirt.gltf",'cloView-Champs', 0xffffff,400,400);
+			new cloView("assets/sweatshirtChamps.gltf",'cloView-Champs', 0xffffff,400,400);
 
        		 
     	} else {
