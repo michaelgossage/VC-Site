@@ -1,62 +1,20 @@
 <!doctype html>
 <html>
 
+<link rel="stylesheet" href="Swiper-4.1.0/dist/css/swiper.min.css">
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
 
 <head>
 
-<link rel="stylesheet" href="Swiper-4.1.0/dist/css/swiper.min.css">
-
-<style>
-    .swiper-container {
-    display:block;
-      width: 60vw;
-      max-height: 570px;
-      /*margin-bottom:40px;*/
-    }
-    .swiper-slide {
-      text-align: center;
-      /*font-size: 12px;*/
-      background: #fff;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-    
-    @media only screen and (max-device-width: 1080px) {
-    .swiper-container {
-    display:block;
-      width: 100vw;
-      max-height: 570px;
-      /*margin-bottom:40px;*/
-    }
-    
-    }
-  </style>
-	
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Vacation_Culture</title>
-
-<!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">-->
-
-
-
 
 </head>
 
 <body>
-
 
 <div class="container">
 
@@ -153,7 +111,7 @@
 
 
 
-<!--CONTAINER DIV CLOSE-->	
+<!--ITEMS CONTAINER DIV CLOSE-->	
 </div>
 
 
