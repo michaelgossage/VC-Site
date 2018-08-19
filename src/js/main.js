@@ -3,7 +3,7 @@
 	//changed this to hopefully solve the mess with $
 	jQuery(document).ready(function($){
 		
-		//BUILD PAGE FIRST??
+		//BUILD PAGE FIRST
 		 
 		//this method is easier cos only 2 things to put in on every page
 		var replaceDiv = function(html,id){
@@ -13,8 +13,8 @@
 			});
 		};
 		//could check the html for the tag befor trying to replace with new html
-		replaceDiv('menu.html','#menu');
-		replaceDiv('footer.html','#footer');
+		replaceDiv('_menu.html','#menu');
+		replaceDiv('_footer.html','#footer');
 	
 	
 	

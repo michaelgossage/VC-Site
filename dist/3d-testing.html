@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	
+		<script src="js/three.js"></script>
+		<script src="js/GLTFLoader.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<!--<script src="js/constants.js"></script>-->
+		
+		<script src="js/cloView.js"></script>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!--<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>-->
+	
+	</head>
+
+	<body>
+	hello king
+		
+		<br/>
+		viewer
+	<div id="hello" style="width: 100%;height: 500px;"></div>
+	<br/>
+	hello2
+	<canvas id="hello2" style="width: 300px;height: 300px";></canvas>
+	
+		<script>
+		/*
+		//TAKES Url of the gltf, id of where to put the 3d scene, 
+		//background color of the scene, 
+		//x and values of the size of the canvas
+		function cloView(url, id ,backgroundCol,x,y){
+		
+		//requires three.js , GLTFLoader.js , OrbitControls.js
+		
+		var scene = new THREE.Scene();
+		var color = new THREE.Color( backgroundCol );
+		scene.background = color;
+		
+		var camera = new THREE.PerspectiveCamera( 50, x / y, 0.1, 10000 );
+		camera.position.z =110;
+		
+		var controls = new THREE.OrbitControls( camera );
+		//below doesnt work as intended
+		controls.domElement = document.getElementById(id);
+		controls.target.set(0,0,0);
+		controls.enableDamping = true;
+		controls.dampingFactor=0.1;
+		controls.rotateSpeed = 0.2;
+		controls.autoRotate=true;
+		controls.autoRotateSpeed=0.1;
+		controls.enableZoom=false;
+		controls.minPolarAngle=1.5;
+		controls.maxPolarAngle=1.5;
+
+		lightDirectional = new THREE.DirectionalLight( 0xffffff,0.14);
+		lightDirectional.position.set( -1, 1.75, 1 );
+		lightDirectional.castShadow =true;
+		scene.add( lightDirectional );
+		
+		lightAmbient = new THREE.AmbientLight( 0xffffff,0.84);
+		scene.add( lightAmbient );
+		
+
+		
+		var renderer = new THREE.WebGLRenderer(antialias = true);
+		renderer.setSize( x, y );
+		
+
+		document.getElementById(id).appendChild( renderer.domElement );
+		
+		
+		//scene.add(cube);
+		
+		var model;
+		var loader = new THREE.GLTFLoader();
+		loader.load( url, function ( gltf ) {
+			model = gltf.scene;
+				gltf.castShadow = true;
+				scene.add( gltf.scene );
+		} );
+		
+		function animate() {
+			requestAnimationFrame( animate );
+			controls.update();
+			renderer.render( scene, camera );
+		}
+		animate();
+		
+		}*/
+		
+		//new cloView("assets/sweat.gltf",'hello2', 0xffffff,200,100);
+		
+		function detectWebGL () {
+    	// Create canvas element. The canvas is not added to the
+    	// document itself, so it is never displayed in the
+    	// browser window.
+    	var canvas = document.createElement("canvas");
+    	// Get WebGLRenderingContext from canvas element.
+    	var gl = canvas.getContext("webgl")
+      		|| canvas.getContext("experimental-webgl");
+    	// Report the result.
+    	if (gl && gl instanceof WebGLRenderingContext) {
+    		console.log("Congratulations! Your browser supports WebGL.");
+			
+			//run webGl content
+			new cloView("assets/sweatshirt.gltf",'hello', 0xffffff,400,400);
+
+       		 
+    	} else {
+				document.getElementById('hello').innerHTML='sorry no webGL so here is a slideshow';
+      		alert("Failed to get WebGL context. "
+        		+ "Your browser or device may not support WebGL.");
+    		}
+  		}
+  		
+  		detectWebGL();
+		
+		</script>
+		
+		
+		
+		
+
+		
+	</body>
+
+</html>

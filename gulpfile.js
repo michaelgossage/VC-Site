@@ -19,7 +19,7 @@ var gulpif = require('gulp-if');
 gulp.task('browserSync', function() {
     browserSync.init({
       server: {
-        baseDir: 'app'
+        baseDir: 'src'
       },
     })
   })
@@ -31,9 +31,9 @@ gulp.task('hello', function() {
 
   //compile scss into css
 gulp.task('compile-sass', function(){
-    return gulp.src('app/scss/**/*.scss')
+    return gulp.src('src/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('app/css'))
+        .pipe(gulp.dest('src/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -42,17 +42,17 @@ gulp.task('compile-sass', function(){
 
 //concate and minify js
 gulp.task('useref', function(){
-    return gulp.src('app/*.html')
+    return gulp.src('src/*.html')
       .pipe(useref())
-      //gulpif- if its a js file out of the useref, uglify(minify) it 
+      //gulpif- if its a js file out of the useref, uglify==minify it 
       .pipe(gulpif('*.js', uglify()))
       .pipe(gulp.dest('dist'))
   });
 
 //run [] before starting to 'watch' when you run watch from terminal
 gulp.task('watch',['browserSync', 'compile-sass'], function(){
-    gulp.watch('app/scss/**/*.scss', ['compile-sass']);
+    gulp.watch('src/scss/**/*.scss', ['compile-sass']);
     //reload page when any changes are found in html or java
-    gulp.watch('app/*.html', browserSync.reload); 
-    gulp.watch('app/js/**/*.js', browserSync.reload); 
+    gulp.watch('src/*.html', browserSync.reload); 
+    gulp.watch('src/js/**/*.js', browserSync.reload); 
 })
