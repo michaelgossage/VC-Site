@@ -1,0 +1,27 @@
+{
+  "name": "vc-site",
+  "version": "1.0.0",
+  "description": "vacation culture website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelgossage/VC-Site.git"
+  },
+  "author": "Michael Gossage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelgossage/VC-Site/issues"
+  },
+  "homepage": "https://github.com/michaelgossage/VC-Site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5"
+  }
+}
