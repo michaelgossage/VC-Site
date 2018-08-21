@@ -11,8 +11,21 @@ var useref = require('gulp-useref');
 
 // for minifying the js
 var uglify = require('gulp-uglify');
+var cssnano = require('gulp-cssnano');
 //for targeting file types when performing operations
 var gulpif = require('gulp-if');
+
+//for optimizing images
+var imagemin = require('gulp-imagemin');
+//for caching images
+var cache = require('gulp-cache');
+
+//for cleaning directories
+var del = require('del');
+
+var runsequence = require('run-sequence');
+
+
 
 
 //initialise a local server
@@ -46,7 +59,36 @@ gulp.task('useref', function(){
       .pipe(useref())
       //gulpif- if its a js file out of the useref, uglify==minify it 
       .pipe(gulpif('*.js', uglify()))
+      .pipe(gulpif('*.css', cssnano()))
       .pipe(gulp.dest('dist'))
+  });
+
+//deal with css
+gulp.task('css', function(){
+    return gulp.src('src/css/**/*.css')
+    .pipe(gulp.dest('dist/css'))
+});
+
+  //optimize images and add to dist
+  gulp.task('optimize-images', function(){
+    return gulp.src('src/images/**/*.+(png|jpg)')
+    .pipe(cache(imagemin({
+        interlace: true
+    })))
+    .pipe(gulp.dest('dist/images'))
+  });
+
+  gulp.task('clean-dist', function(){
+    return del.sync('dist');
+  })
+
+  gulp.task('anything',function(){
+
+  })
+
+  gulp.task('copy-assets', function(){
+      return gulp.src('src/assets/**/*')
+      .pipe(gulp.dest('dist/assets'))
   });
 
 //run [] before starting to 'watch' when you run watch from terminal
@@ -56,3 +98,16 @@ gulp.task('watch',['browserSync', 'compile-sass'], function(){
     gulp.watch('src/*.html', browserSync.reload); 
     gulp.watch('src/js/**/*.js', browserSync.reload); 
 })
+
+gulp.task('build', function(callback){
+    runsequence('clean-dist', ['compile-sass', 'useref', 'optimize-images', 'copy-assets'],callback)
+});
+
+gulp.task('serve-dist', function(){
+    browserSync.init({
+        server: {
+            baseDir: 'dist'
+        },
+    })
+});
+

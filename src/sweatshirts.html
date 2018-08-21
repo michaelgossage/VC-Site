@@ -1,14 +1,17 @@
 <!doctype html>
 <html>
 <!-- swiper.min.css must come before my own stylesheet to make sure my settings take over-->
-<link rel="stylesheet" href="Swiper-4.1.0/dist/css/swiper.min.css">
+
 <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+<!-- build:css css/stylesheet.min.css -->
+<link rel="stylesheet" href="Swiper-4.1.0/dist/css/swiper.min.css">
+<link rel="stylesheet" href="css/stylesheet.css"/>
+<!-- endbuild -->
 
 <!-- build:js js/main.min.js -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
-<script src="Swiper-4.1.0/dist/js/swiper.min.js"></script>
 <!-- endbuild -->
 
 
@@ -201,7 +204,9 @@
 
 </div>
 
-
+<!-- build:js js/swiper.min.js -->
+<script src="Swiper-4.1.0/dist/js/swiper.min.js"></script>
+<!-- endbuild -->
 
   <!-- Initialize Swiper -->
   <script>
@@ -212,11 +217,6 @@
         prevEl: '.swiper-button-prev',
       },
     });
-	
-	//$(document).ready(function(){
-	//	replaceDiv('menu.html','#menu');
-	//	replaceDiv('footer.html','#footer');
-	//});
 
   	</script>
   	
